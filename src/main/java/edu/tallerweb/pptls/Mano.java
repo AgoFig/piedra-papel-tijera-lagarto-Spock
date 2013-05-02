@@ -24,34 +24,32 @@ public class Mano {
 	 */
 
 	public Resultado jugarCon(final Mano otra) {
+		
 		Resultado resultado = Resultado.EMPATA;
 		if(this.forma == otra.forma){
 			resultado = Resultado.EMPATA;
 		}
 		else{
 			
-			if(this.forma == forma.PIEDRA && otra.forma == forma.TIJERA || otra.forma == forma.LAGARTO){
+			if(this.forma == Forma.PIEDRA && otra.forma == Forma.TIJERA || otra.forma == Forma.LAGARTO){
 				resultado = Resultado.GANA;
 			}
 			else{
-				if(this.forma == forma.PAPEL && otra.forma == forma.PIEDRA || otra.forma == forma.SPOCK){
+				if(this.forma == Forma.PAPEL && otra.forma == Forma.PIEDRA || otra.forma == Forma.SPOCK){
 					resultado = Resultado.GANA;
 				}
 				else{
-					if(this.forma == forma.TIJERA && otra.forma == forma.LAGARTO || otra.forma == forma.PAPEL){
+					if(this.forma == Forma.TIJERA && otra.forma == Forma.LAGARTO || otra.forma == Forma.PAPEL){
 						resultado = Resultado.GANA;
 					}
 					else{
-						if(this.forma == forma.LAGARTO && otra.forma == forma.SPOCK || otra.forma == forma.PAPEL){
+						if(this.forma == Forma.LAGARTO && otra.forma == Forma.SPOCK || otra.forma == Forma.PAPEL){
 							resultado = Resultado.GANA;
 						}
 						else{
-							if(this.forma == forma.SPOCK && otra.forma == forma.PIEDRA || otra.forma == forma.TIJERA){
+							if(this.forma == Forma.SPOCK && otra.forma == Forma.PIEDRA || otra.forma == Forma.TIJERA){
 								resultado = Resultado.GANA;
 							}
-							else{
-								
-							}	
 						}	
 					}
 				}
