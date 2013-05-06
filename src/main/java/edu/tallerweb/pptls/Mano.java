@@ -9,8 +9,7 @@ public class Mano {
 
 	/**
 	 * Toda Mano debe crearse con una forma dada, que serÃ¡ la que determine su
-	 * condición en el juego.
-	 * 
+	 * condición en el juego.	 
 	 * @param forma
 	 *            , la Forma que adopta la Mano.
 	 */
@@ -20,8 +19,7 @@ public class Mano {
 	}
 
 	/**
-	 * Evaluara el resultado de la partida segun las reglas del juego.
-	 * 
+	 * Evaluara el resultado de la partida segun las reglas del juego.	
 	 * @param otra
 	 *            , la otra Mano.
 	 * @return un Resultado, de acuerdo al estado del juego.
@@ -65,6 +63,8 @@ public class Mano {
 			} else {
 				resultado = Resultado.PIERDE;
 			}
+			break;
+			default:
 			break;
 		}
 		if (this.forma == otra.forma) {
