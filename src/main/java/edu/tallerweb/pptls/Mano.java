@@ -7,23 +7,10 @@ public class Mano {
 
 	private Forma forma;
 
-	/**
-	 * Toda Mano debe crearse con una forma dada, que será la que determine su
-	 * condici�n en el juego.	 
-	 * @param forma
-	 *            , la Forma que adopta la Mano.
-	 */
 	public Mano(final Forma forma) {
 		this.forma = forma;
 		// throw new RuntimeException("No implementado aún");
 	}
-
-	/**
-	 * Evaluara el resultado de la partida segun las reglas del juego.	
-	 * @param otra
-	 *            , la otra Mano.
-	 * @return un Resultado, de acuerdo al estado del juego.
-	 */
 
 	public Resultado jugarCon(final Mano otra) {
 		Resultado resultado = Resultado.EMPATA;
@@ -64,7 +51,7 @@ public class Mano {
 				resultado = Resultado.PIERDE;
 			}
 			break;
-			default:
+		default:
 			break;
 		}
 		if (this.forma == otra.forma) {
